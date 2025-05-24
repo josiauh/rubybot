@@ -1,0 +1,46 @@
+{
+    "items": {
+        "fish": {
+            "description": "fish",
+            "privilege": false,
+            "price": 20,
+            "rarity": 8
+        },
+        "haxx": {
+            "description": "oh no!!! socket = null!!!",
+            "privilege": false,
+            "price": 7000,
+            "rarity": 1
+        },
+        "slots": {
+            "description": "you've unlocked the slots command!",
+            "privilege": true,
+            "price": 550,
+            "rarity": 7
+        },
+        "golden gumdrop": {
+            "description": "WOAH, you can sell this for 2500 gumdrops!",
+            "privilege": false,
+            "price": 2500,
+            "rarity": 1
+        },
+        "duplicate object key": {
+            "description": "dupe an item",
+            "privilege": false,
+            "price": 10000,
+            "rarity": 0
+        },
+        "coolkidd": {
+            "description": "coolkidd's marketable plushie!",
+            "privilege": false,
+            "price": 5000,
+            "rarity": 1
+        },
+        "perry the platypus": {
+            "description": "PERRY",
+            "privilege": false,
+            "price": 2500,
+            "rarity": 0
+        }
+    }
+}

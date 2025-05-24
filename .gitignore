@@ -1,0 +1,13 @@
+template.js
+globalfs/*
+sandbox/*
+copyThis.txt
+database.json
+token.json
+loginInfo.json
+echoes.log
+spam.log
+spamExceptions.log
+# this is just for the bot commands to get output. it's really simple to recreate
+mapToThingy.js
+*.old.ts
