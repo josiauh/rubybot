@@ -5,6 +5,8 @@ export type StoreItem = {
   privilege: boolean;
   price: number;
   rarity: number;
+  keep?: boolean;
+  useMessage?: string;
 };
 
 export type Store = {

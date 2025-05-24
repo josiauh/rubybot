@@ -52,18 +52,19 @@ export class TwoBBot {
                 bot.messagesSent++;
             }
         }
-        commands.push(HelpCmd)
+       this.commands.push(HelpCmd)
 
         this.prefix = prefix;
         this.messagesSent = 0;
         this.socket.on("connect", () => {
             console.log("we've connected! yeah yeah yeah!")
-            this.socket.emit("message", "RubyBot v2.0.0 - now with modularity!")
+            this.socket.emit("message", "RubyBot v2.0.1 - use command added")
             this.messagesSent++
         })
         refreshDatabase();
         this.socket.on("message", async (data: TwobladeMessage) => {
             if (!data.text.startsWith(prefix)) return;
+            console.log(data)
             if (database.banlist.includes(data.fromUser) && data.text.startsWith(prefix)) {
                 const insults = [
                     "hey, isn't that like, *USER*? nah, just the air.",
@@ -87,13 +88,19 @@ export class TwoBBot {
 
             // Try to find the longest matching command name
             const command = this.commands
-                .filter(cmd => content.startsWith(cmd.name + " "))
+                .filter(cmd => content.startsWith(cmd.name))
                 .sort((a, b) => b.name.length - a.name.length)[0];
 
             if (command) {
                 await command.callback(data, this);
+            } else {
+                this.sendPingMsg("that's not a command!", data.fromUser)
             }
         });
+
+        this.socket.on("error", (e) => {
+            console.log(e);
+        })
     }
 
     sendMsg(msg: string) {

@@ -4,25 +4,29 @@
             "description": "fish",
             "privilege": false,
             "price": 20,
-            "rarity": 8
+            "rarity": 8,
+            "useMessage": "you eat the fish. yum."
         },
         "haxx": {
             "description": "oh no!!! socket = null!!!",
             "privilege": false,
             "price": 7000,
-            "rarity": 1
+            "rarity": 1,
+            "useMessage": "Rubybot has disconnected."
         },
         "slots": {
             "description": "you've unlocked the slots command!",
             "privilege": true,
             "price": 550,
-            "rarity": 7
+            "rarity": 7,
+            "useMessage": "how did you get past the privilege check"
         },
         "golden gumdrop": {
             "description": "WOAH, you can sell this for 2500 gumdrops!",
             "privilege": false,
             "price": 2500,
-            "rarity": 1
+            "rarity": 1,
+            "useMessage": "you eat 24 karats of gumdrops. that was worth 2500 gumdrops."
         },
         "duplicate object key": {
             "description": "dupe an item",
@@ -34,13 +38,23 @@
             "description": "coolkidd's marketable plushie!",
             "privilege": false,
             "price": 5000,
-            "rarity": 1
+            "rarity": 1,
+            "keep": true,
+            "useMessage": "TAG! YOU'RE IT!"
         },
         "perry the platypus": {
             "description": "PERRY",
             "privilege": false,
             "price": 2500,
-            "rarity": 0
+            "rarity": 0,
+            "useMessage": "doobie doobie dooo"
+        },
+        "neutron star": {
+            "description": "made it out of your chromebook.",
+            "privilege": false,
+            "price": 10000,
+            "rarity": 2,
+            "useMessage": "you burn to death"
         }
     }
 }

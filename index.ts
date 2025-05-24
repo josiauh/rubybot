@@ -31,6 +31,7 @@ import { ShopCmd } from "./commands/shop.ts";
 import { LootCmd } from "./commands/loot.ts";
 import { BalanceCmd } from "./commands/balance.ts";
 import { SlotsCmd } from "./commands/slots.ts";
+import { UseCmd } from "./commands/use.ts";
 
 const cmds = [
   DiceCmd,
@@ -50,6 +51,7 @@ const cmds = [
   LootCmd,
   BalanceCmd,
   SlotsCmd,
+  UseCmd
 ];
 
 // Read login credentials from loginInfo.json
@@ -85,6 +87,7 @@ if (!match) {
 
 const authToken = match[1];
 console.log("ruby can haz token!");
+console.log(authToken);
 
 // Instantiate bot with retrieved token
 const Bot: TwoBBot = new TwoBBot(authToken, false, cmds, "ruby");
